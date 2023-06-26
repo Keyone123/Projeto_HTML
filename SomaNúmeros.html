@@ -8,7 +8,7 @@
             background-color: #171313;
             font-family: "Times New Roman", Arial, sans-serif;
             font-size: 20px;
-            color: white;
+            color: black;
             margin: 0;
             padding: 20px;
         }
@@ -44,75 +44,85 @@
         }
         #resultado {
             margin-top: 20px;
-            background-color: #171313;
+            background-color: white;
             padding: 10px;
             border-radius: 1px;
             font-size: 18px;
-            color: white;
+            color: black;
+        }
+        section{
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
-    <h1>Operações de Números</h1>
-    <p>Programa simples que usa as quatro operações matemáticas entre dois números.</p>
-    <label for="numberA">Selecione o primeiro número:</label>
-    <input type="number" name="numberA" id="numberA">
-    <br>
-    <label for="numberB">Selecione o segundo número:</label>
-    <input type="number" name="numberB" id="numberB">
-    <br>
-    <input type="submit" value="Somar" onclick="soma()">
-    <input type="submit" value="Subtrair" onclick="subtracao()">
-    <input type="submit" value="Multiplicar" onclick="multiplicacao()">
-    <input type="submit" value="Dividir" onclick="divisao()">
-    <div id="resultado"></div>
+    <section>
+        <h1>Operações de Números</h1>
+        <p>Programa simples que usa as quatro operações matemáticas entre dois números.</p>
+        <label for="numberA">Selecione o primeiro número:</label>
+        <input type="number" name="numberA" id="numberA">
+        <br>
+        <label for="numberB">Selecione o segundo número:</label>
+        <input type="number" name="numberB" id="numberB">
+        <br>
+        <br>
+        <input type="submit" value="Somar" onclick="soma()">
+        <input type="submit" value="Subtrair" onclick="subtracao()">
+        <input type="submit" value="Multiplicar" onclick="multiplicacao()">
+        <input type="submit" value="Dividir" onclick="divisao()">
+        <div id="resultado"></div>
 
-    <script>
-        function soma() {
-            const num1 = Number(document.querySelector('input#numberA').value);
-            const num2 = Number(document.querySelector('input#numberB').value);
-            const resultado = document.querySelector('div#resultado');
-            const soma = num1 + num2;
-            resultado.innerHTML = `O resultado da soma será ${soma}`;
-        }
-
-        function subtracao() {
-            let diferenca;
-            const num1 = Number(document.querySelector('input#numberA').value);
-            const num2 = Number(document.querySelector('input#numberB').value);
-            const resultado = document.querySelector('div#resultado');
-            if (num1 > num2) {
-                diferenca = num1 - num2;
-            } else if (num2 > num1) {
-                diferenca = num2 - num1;
-            } else {
-                diferenca = 0;
+        <script>
+            function soma() {
+                const num1 = Number(document.querySelector('input#numberA').value);
+                const num2 = Number(document.querySelector('input#numberB').value);
+                const resultado = document.querySelector('div#resultado');
+                const soma = num1 + num2;
+                resultado.innerHTML = `O resultado da soma será ${soma}`;
             }
-            resultado.innerHTML = `O resultado da subtração será ${diferenca}`;
-        }
 
-        function multiplicacao() {
-            const num1 = Number(document.querySelector('input#numberA').value);
-            const num2 = Number(document.querySelector('input#numberB').value);
-            const resultado = document.querySelector('div#resultado');
-            const produto = num1 * num2;
-            resultado.innerHTML = `O resultado da multiplicação será ${produto}`;
-        }
-
-        function divisao() {
-            let resto;
-            const num1 = Number(document.querySelector('input#numberA').value);
-            const num2 = Number(document.querySelector('input#numberB').value);
-            const resultado = document.querySelector('div#resultado');
-            if (num1 > num2) {
-                resto = num1 / num2;
-            } else if (num2 > num1) {
-                resto = num2 / num1;
-            } else {
-                resto = 1;
+            function subtracao() {
+                let diferenca;
+                const num1 = Number(document.querySelector('input#numberA').value);
+                const num2 = Number(document.querySelector('input#numberB').value);
+                const resultado = document.querySelector('div#resultado');
+                if (num1 > num2) {
+                    diferenca = num1 - num2;
+                } else if (num2 > num1) {
+                    diferenca = num2 - num1;
+                } else {
+                    diferenca = 0;
+                }
+                resultado.innerHTML = `O resultado da subtração será ${diferenca}`;
             }
-            resultado.innerHTML = `O resultado da divisão será ${resto}`;
-        }
-    </script>
+
+            function multiplicacao() {
+                const num1 = Number(document.querySelector('input#numberA').value);
+                const num2 = Number(document.querySelector('input#numberB').value);
+                const resultado = document.querySelector('div#resultado');
+                const produto = num1 * num2;
+                resultado.innerHTML = `O resultado da multiplicação será ${produto}`;
+            }
+
+            function divisao() {
+                let resto;
+                const num1 = Number(document.querySelector('input#numberA').value);
+                const num2 = Number(document.querySelector('input#numberB').value);
+                const resultado = document.querySelector('div#resultado');
+                if (num1 > num2) {
+                    resto = num1 / num2;
+                } else if (num2 > num1) {
+                    resto = num2 / num1;
+                } else {
+                    resto = 1;
+                }
+                resultado.innerHTML = `O resultado da divisão será ${resto}`;
+            }
+        </script>
+    </section>
 </body>
 </html>
