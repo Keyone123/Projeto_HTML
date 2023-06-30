@@ -1,0 +1,35 @@
+body{
+    background: linear-gradient(to bottom, #b3d9ff, #004d99);
+    color: black;
+    text-align: center;
+    font-family: "Times New Roman", sans-serif;
+    align-items: center;
+}
+section{
+    background-image: linear-gradient(to bottom, white, transparent);
+    margin: auto;
+    width: 600px;
+    border-radius: 20px;
+    height: 100vh;
+}
+.image-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: inline-block;
+}
+p{
+    font-size: 20px;
+}
+ul{
+    list-style-type: none;
+}
