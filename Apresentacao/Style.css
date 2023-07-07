@@ -1,12 +1,11 @@
 body{
-    background: linear-gradient(to bottom, #b3d9ff, #004d99);
-    color: black;
+    background: linear-gradient(to bottom , green, greenyellow);
+    color: white;
     text-align: center;
-    font-family: "Times New Roman", sans-serif;
     align-items: center;
 }
 section{
-    background-image: linear-gradient(to bottom, white, transparent);
+    background-image: linear-gradient(to bottom left, black, transparent);
     margin: auto;
     width: 600px;
     border-radius: 20px;
@@ -28,8 +27,65 @@ section{
     display: inline-block;
 }
 p{
+    font-family: "Courier New", sans-serif;
     font-size: 20px;
 }
 ul{
     list-style-type: none;
+    align-items: center;
+    margin: auto;
+}
+img:hover{
+    background-color: gray;
+}
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    margin: auto;
+}
+.circle2{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+li{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.teste{
+
+}
+h1{
+    font-size: 50px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: auto;
+}
+.botao{
+    margin-top: 50px;
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: auto;
 }
